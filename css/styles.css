@@ -98,7 +98,7 @@ body {
   color: #000;
 }
 
-/* Disable click event on list item when active */
+/* Disable click event on active list item */
 .header__nav-item.active {
   background-color: #000;
   color: #fff;
