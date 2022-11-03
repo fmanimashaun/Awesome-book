@@ -263,6 +263,16 @@ body {
   margin-inline: auto;
 }
 
+.contact__details-info {
+  list-style:unset;
+  list-style-position: outside;
+  margin-inline: 2rem;
+}
+
+.contact__details-info > * {
+  padding-inline-start: 1.5rem;
+}
+
 /* footer section styles
 ------------------------------------ */
 .footer {

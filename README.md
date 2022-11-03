@@ -33,7 +33,9 @@ In this project, we built a basic website that allows users to add/remove books 
 
 <h3 align="center">Screenhot</h3>
 <p align="center">
-  <img width="375" src="screenshots/mobile_demo.png">
+  <img width="200" src="screenshots/BookList.png">
+  <img width="200" src="screenshots/AddForm.png">
+  <img width="200" src="screenshots/Contact.png">
 </P>
 
 ## Built With
