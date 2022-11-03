@@ -21,14 +21,14 @@ In this project, we built a basic website that allows users to add/remove books 
   - [x] The correct book is removed from the collection.
   - [x] The correct book dissapears from the page.
 - [x] Make sure that data is preserved in the browser's memory by using localStorage.
-- [x] Refactor the code from [PR #12](https://github.com/EngruugbeJimmy/Awesome_books/pull/12)
+- [x] Refactor the the entire code from javascript function to js class methodes
 - [x] Use JavaScript classes instead of objects and arrays
 - [x] replace add and remove function with class methods to add and remove books.
 - [x] Add CSS styles to the application to make it match this wireframe:
 
 ## DEMO LINK
 
-> [Live Demo Link](https://engruugbejimmy.github.io/Awesome_books/)
+> [Live Demo Link](t https://fmanimashaun.github.io/Awesome-book/)
 ## Screenshots
 
 <h3 align="center">Screenhot</h3>
@@ -58,11 +58,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Open your GitHub account the repository's [link](https://github.com/EngruugbeJimmy/Awesome_books)
+- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/Awesome-book)
 
 ### Install
 
-- copy the repo's link and clone it by writing `git clone https://github.com/EngruugbeJimmy/Awesome_books.git` on your git bash terminal.
+- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/Awesome-book.git` on your git bash terminal.
 - `npm install` to install the dependencies
 
 ### Run tests
