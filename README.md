@@ -1,5 +1,8 @@
-![](https://img.shields.io/badge/EngruugbeJimmy-blue)
 ![](https://img.shields.io/badge/fmanimashaun-green)
+![](https://img.shields.io/badge/EngruugbeJimmy-blue)
+![](https://img.shields.io/badge/Oscah01-violet)
+
+
 
 # Awesome books: plain JavaScript with objects
 
