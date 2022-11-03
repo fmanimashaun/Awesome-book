@@ -41,11 +41,10 @@ const CurrentDateTime = () => {
     date += `${month} ${day}th ${year}`;
   }
 
-  return `${date}, ${time}`;
+  dateDisplay.innerHTML = `${date}, ${time}`;
 };
 
-// calling the date-time function and update the UI
-dateDisplay.innerHTML = CurrentDateTime();
+setInterval(CurrentDateTime, 1000);
 
 // create a bookListing class
 class BookListing {
@@ -156,9 +155,6 @@ window.addEventListener('load', () => {
 
 // Add an event listener to the navbar
 navBar.addEventListener('click', (event) => {
-  // call the date-time function and update the html
-  dateDisplay.innerHTML = CurrentDateTime();
-
   if ((event.target.matches('li'))
     && (event.target.innerHTML === 'Add new')) { // checking if the clicked tab is the "add new" tab
     navListItem.forEach((item) => {
