@@ -8,6 +8,41 @@ const addNewBookForm = document.querySelector('.add__book-form');
 const listDiv = document.querySelector('.book__collection');
 const formDiv = document.querySelector('.add__book');
 const contactDiv = document.querySelector('.contact');
+const dateDisplay = document.querySelector('.header__date');
+
+// create a date-time function
+const CurrentDateTime = () => {
+  const dateObject = new Date();
+  const year = dateObject.getFullYear();
+  const month = dateObject.toLocaleString('default', { month: 'long' });
+  const day = dateObject.getDay();
+  const hour = dateObject.getHours();
+  const min = dateObject.getMinutes();
+  const sec = dateObject.getSeconds();
+
+  let date = '';
+  let time = '';
+
+  // create the time string
+  if (hour >= 12) {
+    time += `${hour - 12}:${min}:${sec} pm`;
+  } else {
+    time += `${hour}:${min}:${sec} am`;
+  }
+
+  // create the date string
+  if (day === 1 || day === 21 || day === 31) {
+    date += `${month} ${day}st ${year}`;
+  } else if (day === 2 || day === 22) {
+    date += `${month} ${day}nd ${year}`;
+  } else if (day === 3 || day === 23) {
+    date += `${month} ${day}rd ${year}`;
+  } else {
+    date += `${month} ${day}th ${year}`;
+  }
+
+  return `${date}, ${time}`;
+};
 
 // create a bookListing class
 class BookListing {
@@ -61,6 +96,7 @@ class BookListing {
 
         // Append the book card to the parent node
         bookListDiv.appendChild(bookDiv);
+        dateDisplay.innerHTML = CurrentDateTime();
       });
     }
   }
@@ -118,6 +154,9 @@ window.addEventListener('load', () => {
 
 // Add an event listener to the navbar
 navBar.addEventListener('click', (event) => {
+  // call the date-time function and update the html
+  dateDisplay.innerHTML = CurrentDateTime();
+
   if ((event.target.matches('li'))
     && (event.target.innerHTML === 'Add new')) { // checking if the clicked tab is the "add new" tab
     navListItem.forEach((item) => {
