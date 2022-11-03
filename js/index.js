@@ -44,6 +44,9 @@ const CurrentDateTime = () => {
   return `${date}, ${time}`;
 };
 
+// calling the date-time function and update the UI
+dateDisplay.innerHTML = CurrentDateTime();
+
 // create a bookListing class
 class BookListing {
   // declare a constructor function
@@ -96,7 +99,6 @@ class BookListing {
 
         // Append the book card to the parent node
         bookListDiv.appendChild(bookDiv);
-        dateDisplay.innerHTML = CurrentDateTime();
       });
     }
   }
