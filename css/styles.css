@@ -39,20 +39,21 @@ body {
 }
 
 .container > main {
-  margin-block: auto;
+  margin-block-end: auto;
 }
 
 .container > :first-child:not(main) {
-  margin-block-start: 0;
+  margin-block: 0 2rem;
 }
 
 .container > :last-child:not(main) {
-  margin-block-end: 0;
+  margin-block: 2rem 0;
 }
 
 /* header section styles
 ------------------------------------ */
 .header,
+.header__wrapper,
 .header__nav-list {
   display: flex;
   flex-flow: row wrap;
@@ -61,13 +62,14 @@ body {
   text-align: center;
 }
 
-.header {
-  border: 4px solid #000;
-  font-weight: bold;
+.header > *,
+.header__wrapper > * {
+  width: 100%;
 }
 
-.header > * {
-  width: 100%;
+.header__wrapper {
+  border: 4px solid #000;
+  font-weight: bold;
 }
 
 .header__logo,
@@ -76,21 +78,48 @@ body {
 }
 
 .header__logo {
+  display: block;
   border-block-end: 4px solid #000;
 }
 
-.header__nav-list > * {
+.header__nav-list > .header__nav-item {
   flex: 1;
-  background-color: #ddd;
+  cursor: pointer;
+}
+
+.header__nav-list > .header__nav-item:hover,
+.header__nav-item.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.header__nav-list > .header__nav-item:active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Disable click event on list item when active */
+.header__nav-item.active {
+  background-color: #000;
+  color: #fff;
+  pointer-events: none;
 }
 
 .header__nav-list > li + li {
   border-inline-start: 2px solid #000;
 }
 
+.header__date {
+  text-align: right;
+}
+
 /* book collection section styles
 ------------------------------------ */
-.page-title {
+.book__collection.hidden {
+  display: none;
+}
+
+.book__collection-title {
   text-align: center;
   font-size: 30px;
   line-height: 1.5;
@@ -102,7 +131,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   border: 4px solid #000;
-  margin-block-end: 2rem;
 }
 
 .book {
@@ -160,7 +188,7 @@ body {
   text-align: center;
   font-size: 30px;
   line-height: 1.5;
-  margin-block-end: 1rem;
+  margin-block-end: 3rem;
 }
 
 .add__book-form {
@@ -168,7 +196,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 
 .add__book-form > * {
@@ -202,6 +230,44 @@ body {
   box-shadow: none;
 }
 
+.add__book.hidden {
+  display: none;
+}
+
+/* contact section styles
+------------------------------------ */
+.contact.hidden {
+  display: none;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-block-end: 3rem;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  font-size: 18px;
+  line-height: 1.5;
+  max-inline-size: 520px;
+  margin-inline: auto;
+}
+
+.contact__details-info {
+  list-style: unset;
+  list-style-position: outside;
+  margin-inline: 2rem;
+}
+
+.contact__details-info > * {
+  padding-inline-start: 1.5rem;
+}
+
 /* footer section styles
 ------------------------------------ */
 .footer {
@@ -210,10 +276,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-
   /* header section styles
   ------------------------------------ */
-  .header > * {
+  .header__wrapper > * {
     flex: 1;
   }
 
