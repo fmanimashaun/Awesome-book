@@ -53,6 +53,7 @@ body {
 /* header section styles
 ------------------------------------ */
 .header,
+.header__wrapper,
 .header__nav-list {
   display: flex;
   flex-flow: row wrap;
@@ -61,13 +62,14 @@ body {
   text-align: center;
 }
 
-.header {
-  border: 4px solid #000;
-  font-weight: bold;
+.header > *,
+.header__wrapper > * {
+  width: 100%;
 }
 
-.header > * {
-  width: 100%;
+.header__wrapper {
+  border: 4px solid #000;
+  font-weight: bold;
 }
 
 .header__logo,
@@ -76,6 +78,7 @@ body {
 }
 
 .header__logo {
+  display: block;
   border-block-end: 4px solid #000;
 }
 
@@ -92,12 +95,12 @@ body {
 
 /* Disable click event on list item when active */
 .header__nav-item.active {
- pointer-events: none;
+  pointer-events: none;
 }
 
 .header__nav-list > *:active {
-    background-color: #fff;
-      color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
 .header__nav-item.active {
@@ -110,11 +113,14 @@ body {
   border-inline-start: 2px solid #000;
 }
 
+.header__date {
+  text-align: right;
+}
 
 
 /* book collection section styles
 ------------------------------------ */
-.book__collection.hidden{
+.book__collection.hidden {
   display: none;
 }
 
@@ -265,10 +271,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-
   /* header section styles
   ------------------------------------ */
-  .header > * {
+  .header__wrapper > * {
     flex: 1;
   }
 

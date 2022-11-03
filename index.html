@@ -17,14 +17,17 @@
 
     <!-- ***********************  PAGE HEADER *********************** -->
     <header class="header">
-      <span class="header__logo">Awesome Books</span>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item active">List</li>
-          <li class="header__nav-item">Add new</li>
-          <li class="header__nav-item">Contact</li>
-        </ul>
-      </nav>
+      <div class="header__wrapper">
+        <span class="header__logo">Awesome Books</span>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item active">List</li>
+            <li class="header__nav-item">Add new</li>
+            <li class="header__nav-item">Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <span class="header__date">March 19th 2021, 99:25:32 am</span>
     </header>
 
     <!-- ***********************  PAGE MAIN *********************** -->
@@ -43,15 +46,15 @@
         <h2 class="add__book-title">Add a new book</h2>
 
         <form class="add__book-form">
-        
+
           <label for="title">
             <input type="text" name="title" id="title" placeholder="Title">
           </label>
-        
+
           <label for="author">
             <input type="text" name="author" id="author" placeholder="Author">
           </label>
-        
+
           <input type="submit" value="Add">
         </form>
       </section>
@@ -59,13 +62,14 @@
       <!-- ***********************  CONTACT SECTION *********************** -->
       <section class="contact hidden">
         <h2 class="contact__title">Contact Information</h2>
-      
+
         <div class="contact__details">
           <p>Do you have any question oro you just want to say "Hello"? You can reach out to us!</p>
           <ul>
             <li>Our email: mail@mail.com</li>
             <li>Our phone number: 0043586534422</li>
-            <li>Our address: <address>Streetname 22, 84503 City, Country</address></li>
+            <li>Our address: <address>Streetname 22, 84503 City, Country</address>
+            </li>
           </ul>
 
         </div>
