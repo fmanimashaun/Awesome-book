@@ -28,7 +28,7 @@ In this project, we built a basic website that allows users to add/remove books 
 
 ## DEMO LINK
 
-> [Live Demo Link](t https://fmanimashaun.github.io/Awesome-book/)
+> [Live Demo Link](https://fmanimashaun.github.io/Awesome-book/)
 ## Screenshots
 
 <h3 align="center">Screenhot</h3>
