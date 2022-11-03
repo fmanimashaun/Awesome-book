@@ -85,17 +85,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 ABAH JAMES
-
-- [GitHub](https://github.com/EngruugbeJimmy)
-- [LinkedIn](https://www.linkedin.com/in/abah-james-ugbede-356982159/)
-
 👤 **Engr. Animashaun Fisayo**
 
 - [GitHub](https://github.com/fmanimashaun)
 - [Twitter](https://twitter.com/fmanimashaun)
 - [LinkedIn](https://www.linkedin.com/in/fmanimashaun/)
 - [Website](https://fmanimashaun.com)
+
+👤 ABAH JAMES
+
+- [GitHub](https://github.com/EngruugbeJimmy)
+- [LinkedIn](https://www.linkedin.com/in/abah-james-ugbede-356982159/)
 
 👤 **Oscar Deus**
 
