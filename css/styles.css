@@ -70,12 +70,12 @@ body {
   width: 100%;
 }
 
-.header span,
+.header__logo,
 .header__nav-list > * {
   padding: 0.5rem 1rem;
 }
 
-.header span {
+.header__logo {
   border-block-end: 4px solid #000;
 }
 
@@ -210,13 +210,15 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+
   /* header section styles
   ------------------------------------ */
   .header > * {
     flex: 1;
   }
 
-  .header span {
+  .header__logo {
     border: none;
+    text-align: left;
   }
 }
