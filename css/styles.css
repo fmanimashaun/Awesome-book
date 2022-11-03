@@ -82,27 +82,23 @@ body {
   border-block-end: 4px solid #000;
 }
 
-.header__nav-list > * {
+.header__nav-list > .header__nav-item {
   flex: 1;
   cursor: pointer;
 }
 
-.header__nav-list > *:hover,
+.header__nav-list > .header__nav-item:hover,
 .header__nav-item.active {
   background-color: #000;
   color: #fff;
 }
 
-/* Disable click event on list item when active */
-.header__nav-item.active {
-  pointer-events: none;
-}
-
-.header__nav-list > *:active {
+.header__nav-list > .header__nav-item:active {
   background-color: #fff;
   color: #000;
 }
 
+/* Disable click event on list item when active */
 .header__nav-item.active {
   background-color: #000;
   color: #fff;
@@ -116,7 +112,6 @@ body {
 .header__date {
   text-align: right;
 }
-
 
 /* book collection section styles
 ------------------------------------ */
@@ -264,7 +259,7 @@ body {
 }
 
 .contact__details-info {
-  list-style:unset;
+  list-style: unset;
   list-style-position: outside;
   margin-inline: 2rem;
 }
