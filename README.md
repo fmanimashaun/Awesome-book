@@ -40,6 +40,7 @@ In this project, we built a basic website that allows users to add/remove books 
 ## DEMO LINK
 
 > [Live Demo Link](https://fmanimashaun.github.io/Awesome-book/)
+
 ## Screenshots
 
 <h3 align="center">Screenhot</h3>
@@ -58,7 +59,7 @@ In this project, we built a basic website that allows users to add/remove books 
 
 ## Getting Started
 
-- Install git bash to your machine to enable you to clone this repo.
+- [Optional] Install git bash to your machine to enable you to clone this repo.
 - install Visual Studio to be able to host a local live version.
 - Install a browser to view the local live version.
 
@@ -94,6 +95,8 @@ To get a local copy up and running follow these simple example steps.
 - [Twitter](https://twitter.com/fmanimashaun)
 - [LinkedIn](https://www.linkedin.com/in/fmanimashaun/)
 - [Website](https://fmanimashaun.com)
+
+## Contributors
 
 👤 ABAH JAMES
 
