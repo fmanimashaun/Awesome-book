@@ -13,35 +13,37 @@ const dateDisplay = document.querySelector('.header__date');
 // create a date-time function
 const CurrentDateTime = () => {
   const dateObject = new Date();
-  const year = dateObject.getFullYear();
-  const month = dateObject.toLocaleString('default', { month: 'long' });
-  const day = dateObject.getDay();
-  const hour = dateObject.getHours();
-  const min = dateObject.getMinutes();
-  const sec = dateObject.getSeconds();
+  const yearNow = dateObject.getFullYear();
+  const monthNow = dateObject.toLocaleString('default', { month: 'long' });
+  const dayNow = dateObject.getDate();
+  const timeNow = dateObject.toLocaleTimeString();
 
-  let date = '';
-  let time = '';
-
-  // create the time string
-  if (hour >= 12) {
-    time += `${hour - 12}:${min}:${sec} pm`;
+  // Append suffix to day
+  if (dayNow > 3 && dayNow < 21) {
+    const date = `${monthNow} ${dayNow}th ${yearNow}`;
+    dateDisplay.innerHTML = `${date}, ${timeNow}`;
   } else {
-    time += `${hour}:${min}:${sec} am`;
+    const d = dayNow % 10;
+    let date = '';
+    switch (d) {
+      case 1:
+        date = `${monthNow} ${dayNow}st ${yearNow}`;
+        dateDisplay.innerHTML = `${date}, ${timeNow}`;
+        break;
+      case 2:
+        date = `${monthNow} ${dayNow}nd ${yearNow}`;
+        dateDisplay.innerHTML = `${date}, ${timeNow}`;
+        break;
+      case 3:
+        date = `${monthNow} ${dayNow}rd ${yearNow}`;
+        dateDisplay.innerHTML = `${date}, ${timeNow}`;
+        break;
+      default:
+        date = `${monthNow} ${dayNow}th ${yearNow}`;
+        dateDisplay.innerHTML = `${date}, ${timeNow}`;
+        break;
+    }
   }
-
-  // create the date string
-  if (day === 1 || day === 21 || day === 31) {
-    date += `${month} ${day}st ${year}`;
-  } else if (day === 2 || day === 22) {
-    date += `${month} ${day}nd ${year}`;
-  } else if (day === 3 || day === 23) {
-    date += `${month} ${day}rd ${year}`;
-  } else {
-    date += `${month} ${day}th ${year}`;
-  }
-
-  dateDisplay.innerHTML = `${date}, ${time}`;
 };
 
 setInterval(CurrentDateTime, 1000);
